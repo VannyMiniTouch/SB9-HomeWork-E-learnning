@@ -33,6 +33,7 @@ public class CategoryController {
         categoryService.createCategory(categoryRequestDto);
     }
 
+    @ResponseStatus(HttpStatus.OK)
     @PutMapping("/{id}")
     public CategoryResponseDto updateCategory(@PathVariable Long id, @Valid @RequestBody CategoryRequestDto categoryRequestDto) {
         return categoryService.updateCategory(id, categoryRequestDto);

@@ -4,6 +4,7 @@ import co.istad.elearningapi.dto.CourseReqUpdateDto;
 import co.istad.elearningapi.dto.CourseRequestDto;
 import co.istad.elearningapi.dto.CourseResponseDto;
 import co.istad.elearningapi.service.CourseService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +30,7 @@ public class CourseController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public void createCourse(@RequestBody CourseRequestDto courseRequestDto) {
+    public void createCourse(@Valid @RequestBody CourseRequestDto courseRequestDto) {
          courseService.createCourse(courseRequestDto);
     }
 
