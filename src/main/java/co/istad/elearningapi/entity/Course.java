@@ -26,6 +26,10 @@ public class Course {
     private Boolean isFree;
     @Column(nullable = false)
     private Boolean isDeleted;
+
+//    @Column(name = "cat_id")
+//    private String catId;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "cat_id", referencedColumnName = "id")
     private Category category;

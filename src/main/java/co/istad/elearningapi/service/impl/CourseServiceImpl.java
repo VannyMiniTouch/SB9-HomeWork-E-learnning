@@ -48,8 +48,8 @@ public class CourseServiceImpl implements CourseService {
                         HttpStatus.NOT_FOUND,
                         "There no Instructor with provide id, Please create new instructor first..!"
                 ));
-        course.setCategory(category);
-        course.setInstructor(instructor);
+//        course.setCategory(category);
+//        course.setInstructor(instructor);
         courseRepository.save(course);
     }
 
